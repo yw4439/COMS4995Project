@@ -1,0 +1,5 @@
+/mnt/d/edu/2024 Winter/CSEE4995/image/build/CMakeFiles/ImageProcessingLib.dir
+/mnt/d/edu/2024 Winter/CSEE4995/image/build/CMakeFiles/test_main.dir
+/mnt/d/edu/2024 Winter/CSEE4995/image/build/CMakeFiles/test.dir
+/mnt/d/edu/2024 Winter/CSEE4995/image/build/CMakeFiles/edit_cache.dir
+/mnt/d/edu/2024 Winter/CSEE4995/image/build/CMakeFiles/rebuild_cache.dir
