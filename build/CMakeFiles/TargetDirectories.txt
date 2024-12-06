@@ -1,4 +1,4 @@
-/mnt/d/edu/2024 Winter/coms4995/image/build/CMakeFiles/image_processing.dir
-/mnt/d/edu/2024 Winter/coms4995/image/build/CMakeFiles/test_image_processing.dir
-/mnt/d/edu/2024 Winter/coms4995/image/build/CMakeFiles/edit_cache.dir
-/mnt/d/edu/2024 Winter/coms4995/image/build/CMakeFiles/rebuild_cache.dir
+/home/yanming/COMS4995Project/build/CMakeFiles/image_processing.dir
+/home/yanming/COMS4995Project/build/CMakeFiles/test_image_processing.dir
+/home/yanming/COMS4995Project/build/CMakeFiles/edit_cache.dir
+/home/yanming/COMS4995Project/build/CMakeFiles/rebuild_cache.dir

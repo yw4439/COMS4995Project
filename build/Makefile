@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/d/edu/2024 Winter/coms4995/image"
+CMAKE_SOURCE_DIR = /home/yanming/COMS4995Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/d/edu/2024 Winter/coms4995/image/build"
+CMAKE_BINARY_DIR = /home/yanming/COMS4995Project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/d/edu/2024 Winter/coms4995/image/build/CMakeFiles" "/mnt/d/edu/2024 Winter/coms4995/image/build//CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanming/COMS4995Project/build/CMakeFiles /home/yanming/COMS4995Project/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/d/edu/2024 Winter/coms4995/image/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanming/COMS4995Project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

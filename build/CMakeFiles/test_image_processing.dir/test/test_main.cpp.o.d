@@ -1,5 +1,5 @@
 CMakeFiles/test_image_processing.dir/test/test_main.cpp.o: \
- /mnt/d/edu/2024\ Winter/coms4995/image/test/test_main.cpp \
+ /home/yanming/COMS4995Project/test/test_main.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/13/iostream \
  /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -155,8 +155,8 @@ CMakeFiles/test_image_processing.dir/test/test_main.cpp.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /mnt/d/edu/2024\ Winter/coms4995/image/test/../include/Filters.hpp \
- /mnt/d/edu/2024\ Winter/coms4995/image/test/../include/Image.hpp \
+ /home/yanming/COMS4995Project/test/../include/Filters.hpp \
+ /home/yanming/COMS4995Project/test/../include/Image.hpp \
  /usr/include/c++/13/memory /usr/include/c++/13/bits/stl_tempbuf.h \
  /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_raw_storage_iter.h \

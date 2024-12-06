@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/mnt/d/edu/2024 Winter/coms4995/image/include"
+CXX_INCLUDES = -I/home/yanming/COMS4995Project/include
 
 CXX_FLAGS = -std=gnu++20
 

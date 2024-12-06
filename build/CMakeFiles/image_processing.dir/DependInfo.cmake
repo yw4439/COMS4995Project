@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/d/edu/2024 Winter/coms4995/image/src/Filters.cpp" "CMakeFiles/image_processing.dir/src/Filters.cpp.o" "gcc" "CMakeFiles/image_processing.dir/src/Filters.cpp.o.d"
-  "/mnt/d/edu/2024 Winter/coms4995/image/src/Image.cpp" "CMakeFiles/image_processing.dir/src/Image.cpp.o" "gcc" "CMakeFiles/image_processing.dir/src/Image.cpp.o.d"
+  "/home/yanming/COMS4995Project/src/Filters.cpp" "CMakeFiles/image_processing.dir/src/Filters.cpp.o" "gcc" "CMakeFiles/image_processing.dir/src/Filters.cpp.o.d"
+  "/home/yanming/COMS4995Project/src/Image.cpp" "CMakeFiles/image_processing.dir/src/Image.cpp.o" "gcc" "CMakeFiles/image_processing.dir/src/Image.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

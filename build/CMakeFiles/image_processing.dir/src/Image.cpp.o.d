@@ -1,7 +1,6 @@
 CMakeFiles/image_processing.dir/src/Image.cpp.o: \
- /mnt/d/edu/2024\ Winter/coms4995/image/src/Image.cpp \
- /usr/include/stdc-predef.h \
- /mnt/d/edu/2024\ Winter/coms4995/image/include/Image.hpp \
+ /home/yanming/COMS4995Project/src/Image.cpp /usr/include/stdc-predef.h \
+ /home/yanming/COMS4995Project/include/Image.hpp \
  /usr/include/c++/13/memory /usr/include/c++/13/bits/memoryfwd.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -199,7 +198,7 @@ CMakeFiles/image_processing.dir/src/Image.cpp.o: \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc \
- /mnt/d/edu/2024\ Winter/coms4995/image/include/stb_image.h \
+ /home/yanming/COMS4995Project/include/stb_image.h \
  /usr/include/c++/13/stdlib.h /usr/include/string.h \
  /usr/include/strings.h /usr/include/c++/13/math.h \
  /usr/include/c++/13/cmath /usr/include/math.h \
@@ -241,4 +240,4 @@ CMakeFiles/image_processing.dir/src/Image.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
  /usr/include/c++/13/bits/fstream.tcc /usr/include/c++/13/iostream \
  /usr/include/c++/13/utility /usr/include/c++/13/bits/stl_relops.h \
- /mnt/d/edu/2024\ Winter/coms4995/image/include/stb_image_write.h
+ /home/yanming/COMS4995Project/include/stb_image_write.h

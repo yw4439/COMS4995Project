@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/d/edu/2024 Winter/coms4995/image"
+CMAKE_SOURCE_DIR = /home/yanming/COMS4995Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/d/edu/2024 Winter/coms4995/image/build"
+CMAKE_BINARY_DIR = /home/yanming/COMS4995Project/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/image_processing.dir/depend.make
@@ -70,32 +70,32 @@ include CMakeFiles/image_processing.dir/progress.make
 include CMakeFiles/image_processing.dir/flags.make
 
 CMakeFiles/image_processing.dir/src/Image.cpp.o: CMakeFiles/image_processing.dir/flags.make
-CMakeFiles/image_processing.dir/src/Image.cpp.o: /mnt/d/edu/2024\ Winter/coms4995/image/src/Image.cpp
+CMakeFiles/image_processing.dir/src/Image.cpp.o: /home/yanming/COMS4995Project/src/Image.cpp
 CMakeFiles/image_processing.dir/src/Image.cpp.o: CMakeFiles/image_processing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/d/edu/2024 Winter/coms4995/image/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/image_processing.dir/src/Image.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/image_processing.dir/src/Image.cpp.o -MF CMakeFiles/image_processing.dir/src/Image.cpp.o.d -o CMakeFiles/image_processing.dir/src/Image.cpp.o -c "/mnt/d/edu/2024 Winter/coms4995/image/src/Image.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yanming/COMS4995Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/image_processing.dir/src/Image.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/image_processing.dir/src/Image.cpp.o -MF CMakeFiles/image_processing.dir/src/Image.cpp.o.d -o CMakeFiles/image_processing.dir/src/Image.cpp.o -c /home/yanming/COMS4995Project/src/Image.cpp
 
 CMakeFiles/image_processing.dir/src/Image.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/image_processing.dir/src/Image.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/d/edu/2024 Winter/coms4995/image/src/Image.cpp" > CMakeFiles/image_processing.dir/src/Image.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanming/COMS4995Project/src/Image.cpp > CMakeFiles/image_processing.dir/src/Image.cpp.i
 
 CMakeFiles/image_processing.dir/src/Image.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/image_processing.dir/src/Image.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/d/edu/2024 Winter/coms4995/image/src/Image.cpp" -o CMakeFiles/image_processing.dir/src/Image.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanming/COMS4995Project/src/Image.cpp -o CMakeFiles/image_processing.dir/src/Image.cpp.s
 
 CMakeFiles/image_processing.dir/src/Filters.cpp.o: CMakeFiles/image_processing.dir/flags.make
-CMakeFiles/image_processing.dir/src/Filters.cpp.o: /mnt/d/edu/2024\ Winter/coms4995/image/src/Filters.cpp
+CMakeFiles/image_processing.dir/src/Filters.cpp.o: /home/yanming/COMS4995Project/src/Filters.cpp
 CMakeFiles/image_processing.dir/src/Filters.cpp.o: CMakeFiles/image_processing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/d/edu/2024 Winter/coms4995/image/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/image_processing.dir/src/Filters.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/image_processing.dir/src/Filters.cpp.o -MF CMakeFiles/image_processing.dir/src/Filters.cpp.o.d -o CMakeFiles/image_processing.dir/src/Filters.cpp.o -c "/mnt/d/edu/2024 Winter/coms4995/image/src/Filters.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yanming/COMS4995Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/image_processing.dir/src/Filters.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/image_processing.dir/src/Filters.cpp.o -MF CMakeFiles/image_processing.dir/src/Filters.cpp.o.d -o CMakeFiles/image_processing.dir/src/Filters.cpp.o -c /home/yanming/COMS4995Project/src/Filters.cpp
 
 CMakeFiles/image_processing.dir/src/Filters.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/image_processing.dir/src/Filters.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/d/edu/2024 Winter/coms4995/image/src/Filters.cpp" > CMakeFiles/image_processing.dir/src/Filters.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanming/COMS4995Project/src/Filters.cpp > CMakeFiles/image_processing.dir/src/Filters.cpp.i
 
 CMakeFiles/image_processing.dir/src/Filters.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/image_processing.dir/src/Filters.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/d/edu/2024 Winter/coms4995/image/src/Filters.cpp" -o CMakeFiles/image_processing.dir/src/Filters.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanming/COMS4995Project/src/Filters.cpp -o CMakeFiles/image_processing.dir/src/Filters.cpp.s
 
 # Object files for target image_processing
 image_processing_OBJECTS = \
@@ -109,7 +109,7 @@ libimage_processing.a: CMakeFiles/image_processing.dir/src/Image.cpp.o
 libimage_processing.a: CMakeFiles/image_processing.dir/src/Filters.cpp.o
 libimage_processing.a: CMakeFiles/image_processing.dir/build.make
 libimage_processing.a: CMakeFiles/image_processing.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/mnt/d/edu/2024 Winter/coms4995/image/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libimage_processing.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/yanming/COMS4995Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libimage_processing.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/image_processing.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/image_processing.dir/link.txt --verbose=$(VERBOSE)
 
@@ -122,6 +122,6 @@ CMakeFiles/image_processing.dir/clean:
 .PHONY : CMakeFiles/image_processing.dir/clean
 
 CMakeFiles/image_processing.dir/depend:
-	cd "/mnt/d/edu/2024 Winter/coms4995/image/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/d/edu/2024 Winter/coms4995/image" "/mnt/d/edu/2024 Winter/coms4995/image" "/mnt/d/edu/2024 Winter/coms4995/image/build" "/mnt/d/edu/2024 Winter/coms4995/image/build" "/mnt/d/edu/2024 Winter/coms4995/image/build/CMakeFiles/image_processing.dir/DependInfo.cmake" "--color=$(COLOR)"
+	cd /home/yanming/COMS4995Project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yanming/COMS4995Project /home/yanming/COMS4995Project /home/yanming/COMS4995Project/build /home/yanming/COMS4995Project/build /home/yanming/COMS4995Project/build/CMakeFiles/image_processing.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/image_processing.dir/depend
 
