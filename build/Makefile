@@ -57,23 +57,13 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/d/edu/2024 Winter/CSEE4995/image"
+CMAKE_SOURCE_DIR = "/mnt/d/edu/2024 Winter/coms4995/image"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/d/edu/2024 Winter/CSEE4995/image/build"
+CMAKE_BINARY_DIR = "/mnt/d/edu/2024 Winter/coms4995/image/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -97,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/d/edu/2024 Winter/CSEE4995/image/build/CMakeFiles" "/mnt/d/edu/2024 Winter/CSEE4995/image/build//CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/d/edu/2024 Winter/coms4995/image/build/CMakeFiles" "/mnt/d/edu/2024 Winter/coms4995/image/build//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/d/edu/2024 Winter/CSEE4995/image/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/d/edu/2024 Winter/coms4995/image/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -127,85 +117,85 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ImageProcessingLib
+# Target rules for targets named image_processing
 
 # Build rule for target.
-ImageProcessingLib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ImageProcessingLib
-.PHONY : ImageProcessingLib
+image_processing: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 image_processing
+.PHONY : image_processing
 
 # fast build rule for target.
-ImageProcessingLib/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImageProcessingLib.dir/build.make CMakeFiles/ImageProcessingLib.dir/build
-.PHONY : ImageProcessingLib/fast
+image_processing/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_processing.dir/build.make CMakeFiles/image_processing.dir/build
+.PHONY : image_processing/fast
 
 #=============================================================================
-# Target rules for targets named test_main
+# Target rules for targets named test_image_processing
 
 # Build rule for target.
-test_main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_main
-.PHONY : test_main
+test_image_processing: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_image_processing
+.PHONY : test_image_processing
 
 # fast build rule for target.
-test_main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/build
-.PHONY : test_main/fast
+test_image_processing/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_image_processing.dir/build.make CMakeFiles/test_image_processing.dir/build
+.PHONY : test_image_processing/fast
 
-source/Filters.o: source/Filters.cpp.o
-.PHONY : source/Filters.o
-
-# target to build an object file
-source/Filters.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImageProcessingLib.dir/build.make CMakeFiles/ImageProcessingLib.dir/source/Filters.cpp.o
-.PHONY : source/Filters.cpp.o
-
-source/Filters.i: source/Filters.cpp.i
-.PHONY : source/Filters.i
-
-# target to preprocess a source file
-source/Filters.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImageProcessingLib.dir/build.make CMakeFiles/ImageProcessingLib.dir/source/Filters.cpp.i
-.PHONY : source/Filters.cpp.i
-
-source/Filters.s: source/Filters.cpp.s
-.PHONY : source/Filters.s
-
-# target to generate assembly for a file
-source/Filters.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImageProcessingLib.dir/build.make CMakeFiles/ImageProcessingLib.dir/source/Filters.cpp.s
-.PHONY : source/Filters.cpp.s
-
-source/Image.o: source/Image.cpp.o
-.PHONY : source/Image.o
+src/Filters.o: src/Filters.cpp.o
+.PHONY : src/Filters.o
 
 # target to build an object file
-source/Image.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImageProcessingLib.dir/build.make CMakeFiles/ImageProcessingLib.dir/source/Image.cpp.o
-.PHONY : source/Image.cpp.o
+src/Filters.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_processing.dir/build.make CMakeFiles/image_processing.dir/src/Filters.cpp.o
+.PHONY : src/Filters.cpp.o
 
-source/Image.i: source/Image.cpp.i
-.PHONY : source/Image.i
+src/Filters.i: src/Filters.cpp.i
+.PHONY : src/Filters.i
 
 # target to preprocess a source file
-source/Image.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImageProcessingLib.dir/build.make CMakeFiles/ImageProcessingLib.dir/source/Image.cpp.i
-.PHONY : source/Image.cpp.i
+src/Filters.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_processing.dir/build.make CMakeFiles/image_processing.dir/src/Filters.cpp.i
+.PHONY : src/Filters.cpp.i
 
-source/Image.s: source/Image.cpp.s
-.PHONY : source/Image.s
+src/Filters.s: src/Filters.cpp.s
+.PHONY : src/Filters.s
 
 # target to generate assembly for a file
-source/Image.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImageProcessingLib.dir/build.make CMakeFiles/ImageProcessingLib.dir/source/Image.cpp.s
-.PHONY : source/Image.cpp.s
+src/Filters.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_processing.dir/build.make CMakeFiles/image_processing.dir/src/Filters.cpp.s
+.PHONY : src/Filters.cpp.s
+
+src/Image.o: src/Image.cpp.o
+.PHONY : src/Image.o
+
+# target to build an object file
+src/Image.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_processing.dir/build.make CMakeFiles/image_processing.dir/src/Image.cpp.o
+.PHONY : src/Image.cpp.o
+
+src/Image.i: src/Image.cpp.i
+.PHONY : src/Image.i
+
+# target to preprocess a source file
+src/Image.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_processing.dir/build.make CMakeFiles/image_processing.dir/src/Image.cpp.i
+.PHONY : src/Image.cpp.i
+
+src/Image.s: src/Image.cpp.s
+.PHONY : src/Image.s
+
+# target to generate assembly for a file
+src/Image.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_processing.dir/build.make CMakeFiles/image_processing.dir/src/Image.cpp.s
+.PHONY : src/Image.cpp.s
 
 test/test_main.o: test/test_main.cpp.o
 .PHONY : test/test_main.o
 
 # target to build an object file
 test/test_main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/test/test_main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_image_processing.dir/build.make CMakeFiles/test_image_processing.dir/test/test_main.cpp.o
 .PHONY : test/test_main.cpp.o
 
 test/test_main.i: test/test_main.cpp.i
@@ -213,7 +203,7 @@ test/test_main.i: test/test_main.cpp.i
 
 # target to preprocess a source file
 test/test_main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/test/test_main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_image_processing.dir/build.make CMakeFiles/test_image_processing.dir/test/test_main.cpp.i
 .PHONY : test/test_main.cpp.i
 
 test/test_main.s: test/test_main.cpp.s
@@ -221,7 +211,7 @@ test/test_main.s: test/test_main.cpp.s
 
 # target to generate assembly for a file
 test/test_main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/test/test_main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_image_processing.dir/build.make CMakeFiles/test_image_processing.dir/test/test_main.cpp.s
 .PHONY : test/test_main.cpp.s
 
 # Help Target
@@ -232,15 +222,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... test"
-	@echo "... ImageProcessingLib"
-	@echo "... test_main"
-	@echo "... source/Filters.o"
-	@echo "... source/Filters.i"
-	@echo "... source/Filters.s"
-	@echo "... source/Image.o"
-	@echo "... source/Image.i"
-	@echo "... source/Image.s"
+	@echo "... image_processing"
+	@echo "... test_image_processing"
+	@echo "... src/Filters.o"
+	@echo "... src/Filters.i"
+	@echo "... src/Filters.s"
+	@echo "... src/Image.o"
+	@echo "... src/Image.i"
+	@echo "... src/Image.s"
 	@echo "... test/test_main.o"
 	@echo "... test/test_main.i"
 	@echo "... test/test_main.s"

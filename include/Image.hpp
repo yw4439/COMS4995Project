@@ -1,28 +1,45 @@
-#ifndef IMAGE_HPP
-#define IMAGE_HPP
+#pragma once
 
-#include <vector>
+#include <memory>
 #include <string>
-#include <cstdint>
+#include <vector>
+
+namespace image_processing {
 
 class Image {
-public:
-    int width, height, channels;        // 图像宽度、高度、通道数
-    std::vector<uint8_t> data;          // 像素数据
+   public:
+    Image();                     // Default constructor
+    Image(int w, int h, int c);  // Constructor with width, height, and channels
+    explicit Image(const std::string& filepath);  // Constructor with file path
 
-    // 构造函数
-    Image(int w, int h, int c);
-
-    // 加载和保存图像（支持 PNG 和 BMP）
     bool load(const std::string& filepath);
     bool save(const std::string& filepath) const;
 
-private:
-    bool loadBMP(const std::string& filepath); // 加载 BMP 文件
-    bool saveBMP(const std::string& filepath) const; // 保存 BMP 文件
-    bool loadPNG(const std::string& filepath); // 加载 PNG 文件
-    bool savePNG(const std::string& filepath) const; // 保存 PNG 文件
+    int getWidth() const noexcept { return width; }
+    int getHeight() const noexcept { return height; }
+    int getChannels() const noexcept { return channels; }
+
+    std::vector<uint8_t>& getData() noexcept { return data; }
+    const std::vector<uint8_t>& getData() const noexcept { return data; }
+
+    // Copy and move constructors
+    Image(const Image& other);      // Copy constructor
+    Image(Image&& other) noexcept;  // Move constructor
+
+    // Copy and move assignment operators
+    Image& operator=(const Image& other);      // Copy assignment operator
+    Image& operator=(Image&& other) noexcept;  // Move assignment operator
+
+   private:
+    int width;
+    int height;
+    int channels;
+    std::vector<uint8_t> data;
+
+    bool loadPNG(const std::string& filepath);
+    bool savePNG(const std::string& filepath) const;
+    bool loadBMP(const std::string& filepath);
+    bool saveBMP(const std::string& filepath) const;
 };
 
-#endif
-
+}  // namespace image_processing

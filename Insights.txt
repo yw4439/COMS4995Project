@@ -1,0 +1,21 @@
+
+use of namespace
+
+use of "explicit", avoiding implicit conversions
+
+namespace
+
+Move Semantics: copy -> transfer ownership -> improve perfomance; e.g. Image(Image&&) noexcept and Image& operator=(Image&&) noexcept)
+constexpr and noexcept-> prevent unexpected exceptions
+
+std::unique_ptr -> ensures resources releasing; e.g. stbi_image_free <- custom deleter
+
+Range-Based For Loop
+
+use {} to assign value -> "="
+
+use constexpr to computed at compile time
+
+#pragma once replace #ifndef + #define
+
+use auto -> type deduction

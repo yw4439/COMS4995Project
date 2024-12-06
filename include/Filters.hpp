@@ -1,26 +1,28 @@
-#ifndef FILTERS_HPP
-#define FILTERS_HPP
+#pragma once
 
 #include "Image.hpp"
 
-// 将 RGB 图像转换为灰度图
+namespace image_processing {
+
+// Applies a grayscale filter to the given image
 void grayscale(Image& img);
 
+// Flips the given image horizontally
 void flip_horizontal(Image& img);
 
-// 垂直翻转
+// Flips the given image vertically
 void flip_vertical(Image& img);
 
-// 缩放图像
+// Resizes the given image to the specified width and height
 Image resize(const Image& img, int new_width, int new_height);
 
-// 旋转图像（90° 顺时针）
+// Rotates the given image 90 degrees counterclockwise
 Image rotate(const Image& img);
 
-// 边缘检测
+// Applies an edge detection filter to the given image
 void edge_detection(Image& img);
 
-// 高斯模糊
+// Applies a Gaussian blur to the given image
 void gaussian_blur(Image& img);
 
-#endif
+}  // namespace image_processing

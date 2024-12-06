@@ -1,0 +1,2 @@
+/usr/bin/ar qc libimage_processing.a CMakeFiles/image_processing.dir/src/Image.cpp.o CMakeFiles/image_processing.dir/src/Filters.cpp.o
+/usr/bin/ranlib libimage_processing.a

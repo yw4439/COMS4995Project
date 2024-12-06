@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/d/edu/2024 Winter/CSEE4995/image
+# Install script for directory: /mnt/d/edu/2024 Winter/coms4995/image
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/d/edu/2024 Winter/CSEE4995/image/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/d/edu/2024 Winter/coms4995/image/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
