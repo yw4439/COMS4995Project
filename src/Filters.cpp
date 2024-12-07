@@ -1,5 +1,3 @@
-#include "Filters.hpp"
-
 #include <algorithm>
 #include <cmath>
 #include <execution>  // Parallel execution policies
@@ -8,6 +6,7 @@
 #include <stdexcept>
 #include <vector>
 
+#include "Filters.hpp"
 #include "Image.hpp"
 
 namespace image_processing {
@@ -46,8 +45,9 @@ void flip_vertical(Image& img) {
     });
 }
 
-Image resize(const Image& img, int new_width, int new_height) {
-    Image resized(new_width, new_height, img.getChannels());
+std::unique_ptr<Image> resize(const Image& img, int new_width, int new_height) {
+    auto resized =
+        std::make_unique<Image>(new_width, new_height, img.getChannels());
 
     auto rows     = std::views::iota(0, new_height);
     float x_ratio = static_cast<float>(img.getWidth()) / new_width;
@@ -61,35 +61,12 @@ Image resize(const Image& img, int new_width, int new_height) {
             int dst_idx = (i * new_width + j) * img.getChannels();
 
             for (int c : std::views::iota(0, img.getChannels())) {
-                resized.getData()[dst_idx + c] = img.getData()[src_idx + c];
+                resized->getData()[dst_idx + c] = img.getData()[src_idx + c];
             }
         }
     });
 
     return resized;
-}
-
-void grayscale(Image& img) {
-    if (img.getChannels() < 3) {
-        throw std::runtime_error("Image must be RGB!");
-    }
-
-    auto rows = std::views::iota(0, img.getHeight());
-
-    std::for_each(std::execution::par, rows.begin(), rows.end(), [&img](int i) {
-        for (int j : std::views::iota(0, img.getWidth())) {
-            int idx    = (i * img.getWidth() + j) * img.getChannels();
-            auto& data = img.getData();
-            uint8_t r  = data[idx];
-            uint8_t g  = data[idx + 1];
-            uint8_t b  = data[idx + 2];
-            uint8_t gray =
-                static_cast<uint8_t>(0.299 * r + 0.587 * g + 0.114 * b);
-            data[idx]     = gray;
-            data[idx + 1] = gray;
-            data[idx + 2] = gray;
-        }
-    });
 }
 
 void invert_colors(Image& img) {
@@ -108,8 +85,9 @@ void invert_colors(Image& img) {
     });
 }
 
-Image rotate(const Image& img) {
-    Image rotated(img.getHeight(), img.getWidth(), img.getChannels());
+std::unique_ptr<Image> rotate(const Image& img) {
+    auto rotated = std::make_unique<Image>(img.getHeight(), img.getWidth(),
+                                           img.getChannels());
 
     auto rows = std::views::iota(0, img.getHeight());
 
@@ -120,7 +98,7 @@ Image rotate(const Image& img) {
                           img.getChannels();
 
             for (int c : std::views::iota(0, img.getChannels())) {
-                rotated.getData()[dst_idx + c] = img.getData()[src_idx + c];
+                rotated->getData()[dst_idx + c] = img.getData()[src_idx + c];
             }
         }
     });
@@ -237,6 +215,30 @@ void adjust_contrast(Image& img, float factor) {
                 // Clamp the result to ensure valid pixel range
                 img.getData()[idx] = std::clamp(new_value, 0, 255);
             }
+        }
+    });
+}
+
+void grayscale(const Image& img, Image& output) {
+    if (img.getChannels() < 3) {
+        throw std::runtime_error("Image must be RGB!");
+    }
+
+    auto& input_data  = img.getData();
+    auto& output_data = output.getData();
+
+    auto rows = std::views::iota(0, img.getHeight());
+    std::for_each(std::execution::par, rows.begin(), rows.end(), [&](int i) {
+        for (int j : std::views::iota(0, img.getWidth())) {
+            int idx   = (i * img.getWidth() + j) * img.getChannels();
+            uint8_t r = input_data[idx];
+            uint8_t g = input_data[idx + 1];
+            uint8_t b = input_data[idx + 2];
+            uint8_t gray =
+                static_cast<uint8_t>(0.299 * r + 0.587 * g + 0.114 * b);
+            output_data[idx]     = gray;
+            output_data[idx + 1] = gray;
+            output_data[idx + 2] = gray;
         }
     });
 }

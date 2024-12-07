@@ -3,6 +3,7 @@
 #include "stb_image.h"
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include <algorithm>
+#include <array>
 #include <fstream>
 #include <iostream>
 #include <stdexcept>
@@ -122,16 +123,14 @@ bool Image::savePNG(const std::string& filepath) const {
 bool Image::loadBMP(const std::string& filepath) {
     std::ifstream file(filepath, std::ios::binary);
     if (!file) {
-        std::cerr << "Error: Could not open file: " << filepath << std::endl;
-        return false;
+        throw std::runtime_error("Error: Could not open file: " + filepath);
     }
 
-    uint8_t header[54];
-    file.read(reinterpret_cast<char*>(header), 54);
+    std::array<uint8_t, 54> header;
+    file.read(reinterpret_cast<char*>(header.data()), header.size());
 
     if (header[0] != 'B' || header[1] != 'M') {
-        std::cerr << "Error: Not a valid BMP file." << std::endl;
-        return false;
+        throw std::runtime_error("Error: Not a valid BMP file.");
     }
 
     width                 = *reinterpret_cast<int*>(&header[18]);
@@ -140,9 +139,8 @@ bool Image::loadBMP(const std::string& filepath) {
     channels              = bitsPerPixel / 8;
 
     if (width <= 0 || height <= 0 || (channels != 3 && channels != 1)) {
-        std::cerr << "Error: Invalid BMP dimensions or unsupported format."
-                  << std::endl;
-        return false;
+        throw std::runtime_error(
+            "Error: Invalid BMP dimensions or unsupported format.");
     }
 
     uint32_t dataOffset = *reinterpret_cast<uint32_t*>(&header[10]);
@@ -157,10 +155,10 @@ bool Image::loadBMP(const std::string& filepath) {
 bool Image::saveBMP(const std::string& filepath) const {
     std::ofstream file(filepath, std::ios::binary);
     if (!file) {
-        return false;
+        throw std::runtime_error("Error: Could not create file: " + filepath);
     }
 
-    uint8_t header[54]                     = {0};
+    std::array<uint8_t, 54> header         = {};
     header[0]                              = 'B';
     header[1]                              = 'M';
     *reinterpret_cast<int*>(&header[2])    = 54 + data.size();
@@ -170,7 +168,7 @@ bool Image::saveBMP(const std::string& filepath) const {
     *reinterpret_cast<short*>(&header[26]) = 1;
     *reinterpret_cast<short*>(&header[28]) = channels * 8;
 
-    file.write(reinterpret_cast<const char*>(header), 54);
+    file.write(reinterpret_cast<const char*>(header.data()), header.size());
     file.write(reinterpret_cast<const char*>(data.data()), data.size());
 
     return true;

@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /home/yanming/COMS4995Project/build
 
 # The main recursive "all" target.
 all: CMakeFiles/image_processing.dir/all
+all: CMakeFiles/interactive_app.dir/all
 all: CMakeFiles/test_image_processing.dir/all
 .PHONY : all
 
@@ -73,6 +74,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/image_processing.dir/clean
+clean: CMakeFiles/interactive_app.dir/clean
 clean: CMakeFiles/test_image_processing.dir/clean
 .PHONY : clean
 
@@ -103,13 +105,39 @@ CMakeFiles/image_processing.dir/clean:
 .PHONY : CMakeFiles/image_processing.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/interactive_app.dir
+
+# All Build rule for target.
+CMakeFiles/interactive_app.dir/all: CMakeFiles/image_processing.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interactive_app.dir/build.make CMakeFiles/interactive_app.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interactive_app.dir/build.make CMakeFiles/interactive_app.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/yanming/COMS4995Project/build/CMakeFiles --progress-num=4,5 "Built target interactive_app"
+.PHONY : CMakeFiles/interactive_app.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/interactive_app.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanming/COMS4995Project/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/interactive_app.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanming/COMS4995Project/build/CMakeFiles 0
+.PHONY : CMakeFiles/interactive_app.dir/rule
+
+# Convenience name for target.
+interactive_app: CMakeFiles/interactive_app.dir/rule
+.PHONY : interactive_app
+
+# clean rule for target.
+CMakeFiles/interactive_app.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interactive_app.dir/build.make CMakeFiles/interactive_app.dir/clean
+.PHONY : CMakeFiles/interactive_app.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/test_image_processing.dir
 
 # All Build rule for target.
 CMakeFiles/test_image_processing.dir/all: CMakeFiles/image_processing.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_image_processing.dir/build.make CMakeFiles/test_image_processing.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_image_processing.dir/build.make CMakeFiles/test_image_processing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/yanming/COMS4995Project/build/CMakeFiles --progress-num=4,5 "Built target test_image_processing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/yanming/COMS4995Project/build/CMakeFiles --progress-num=6,7 "Built target test_image_processing"
 .PHONY : CMakeFiles/test_image_processing.dir/all
 
 # Build rule for subdir invocation for target.

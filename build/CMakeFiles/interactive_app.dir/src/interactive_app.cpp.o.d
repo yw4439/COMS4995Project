@@ -1,5 +1,5 @@
-CMakeFiles/test_image_processing.dir/test/test_main.cpp.o: \
- /home/yanming/COMS4995Project/test/test_main.cpp \
+CMakeFiles/interactive_app.dir/src/interactive_app.cpp.o: \
+ /home/yanming/COMS4995Project/src/interactive_app.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/13/iostream \
  /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -155,16 +155,16 @@ CMakeFiles/test_image_processing.dir/test/test_main.cpp.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /home/yanming/COMS4995Project/test/../include/Filters.hpp \
- /home/yanming/COMS4995Project/test/../include/Image.hpp \
- /usr/include/c++/13/memory /usr/include/c++/13/bits/stl_tempbuf.h \
- /usr/include/c++/13/bits/stl_uninitialized.h \
- /usr/include/c++/13/bits/stl_raw_storage_iter.h \
- /usr/include/c++/13/bits/align.h \
+ /home/yanming/COMS4995Project/include/Filters.hpp \
+ /usr/include/c++/13/cstdint \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
- /usr/include/c++/13/bits/unique_ptr.h \
+ /home/yanming/COMS4995Project/include/Image.hpp \
+ /usr/include/c++/13/memory /usr/include/c++/13/bits/stl_tempbuf.h \
+ /usr/include/c++/13/bits/stl_uninitialized.h \
+ /usr/include/c++/13/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/13/bits/align.h /usr/include/c++/13/bits/unique_ptr.h \
  /usr/include/c++/13/bits/shared_ptr.h \
  /usr/include/c++/13/bits/shared_ptr_base.h \
  /usr/include/c++/13/bits/allocated_ptr.h \
@@ -173,8 +173,7 @@ CMakeFiles/test_image_processing.dir/test/test_main.cpp.o: \
  /usr/include/c++/13/bits/shared_ptr_atomic.h \
  /usr/include/c++/13/bits/atomic_base.h \
  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
- /usr/include/c++/13/bits/atomic_wait.h /usr/include/c++/13/cstdint \
- /usr/include/c++/13/climits \
+ /usr/include/c++/13/bits/atomic_wait.h /usr/include/c++/13/climits \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \

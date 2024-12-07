@@ -69,28 +69,28 @@ include CMakeFiles/test_image_processing.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/test_image_processing.dir/flags.make
 
-CMakeFiles/test_image_processing.dir/test/test_main.cpp.o: CMakeFiles/test_image_processing.dir/flags.make
-CMakeFiles/test_image_processing.dir/test/test_main.cpp.o: /home/yanming/COMS4995Project/test/test_main.cpp
-CMakeFiles/test_image_processing.dir/test/test_main.cpp.o: CMakeFiles/test_image_processing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yanming/COMS4995Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_image_processing.dir/test/test_main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_image_processing.dir/test/test_main.cpp.o -MF CMakeFiles/test_image_processing.dir/test/test_main.cpp.o.d -o CMakeFiles/test_image_processing.dir/test/test_main.cpp.o -c /home/yanming/COMS4995Project/test/test_main.cpp
+CMakeFiles/test_image_processing.dir/test/test.cpp.o: CMakeFiles/test_image_processing.dir/flags.make
+CMakeFiles/test_image_processing.dir/test/test.cpp.o: /home/yanming/COMS4995Project/test/test.cpp
+CMakeFiles/test_image_processing.dir/test/test.cpp.o: CMakeFiles/test_image_processing.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yanming/COMS4995Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_image_processing.dir/test/test.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_image_processing.dir/test/test.cpp.o -MF CMakeFiles/test_image_processing.dir/test/test.cpp.o.d -o CMakeFiles/test_image_processing.dir/test/test.cpp.o -c /home/yanming/COMS4995Project/test/test.cpp
 
-CMakeFiles/test_image_processing.dir/test/test_main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_image_processing.dir/test/test_main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanming/COMS4995Project/test/test_main.cpp > CMakeFiles/test_image_processing.dir/test/test_main.cpp.i
+CMakeFiles/test_image_processing.dir/test/test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_image_processing.dir/test/test.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanming/COMS4995Project/test/test.cpp > CMakeFiles/test_image_processing.dir/test/test.cpp.i
 
-CMakeFiles/test_image_processing.dir/test/test_main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_image_processing.dir/test/test_main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanming/COMS4995Project/test/test_main.cpp -o CMakeFiles/test_image_processing.dir/test/test_main.cpp.s
+CMakeFiles/test_image_processing.dir/test/test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_image_processing.dir/test/test.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanming/COMS4995Project/test/test.cpp -o CMakeFiles/test_image_processing.dir/test/test.cpp.s
 
 # Object files for target test_image_processing
 test_image_processing_OBJECTS = \
-"CMakeFiles/test_image_processing.dir/test/test_main.cpp.o"
+"CMakeFiles/test_image_processing.dir/test/test.cpp.o"
 
 # External object files for target test_image_processing
 test_image_processing_EXTERNAL_OBJECTS =
 
-test_image_processing: CMakeFiles/test_image_processing.dir/test/test_main.cpp.o
+test_image_processing: CMakeFiles/test_image_processing.dir/test/test.cpp.o
 test_image_processing: CMakeFiles/test_image_processing.dir/build.make
 test_image_processing: libimage_processing.a
 test_image_processing: CMakeFiles/test_image_processing.dir/link.txt

@@ -130,6 +130,19 @@ image_processing/fast:
 .PHONY : image_processing/fast
 
 #=============================================================================
+# Target rules for targets named interactive_app
+
+# Build rule for target.
+interactive_app: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 interactive_app
+.PHONY : interactive_app
+
+# fast build rule for target.
+interactive_app/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interactive_app.dir/build.make CMakeFiles/interactive_app.dir/build
+.PHONY : interactive_app/fast
+
+#=============================================================================
 # Target rules for targets named test_image_processing
 
 # Build rule for target.
@@ -190,29 +203,53 @@ src/Image.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_processing.dir/build.make CMakeFiles/image_processing.dir/src/Image.cpp.s
 .PHONY : src/Image.cpp.s
 
-test/test_main.o: test/test_main.cpp.o
-.PHONY : test/test_main.o
+src/interactive_app.o: src/interactive_app.cpp.o
+.PHONY : src/interactive_app.o
 
 # target to build an object file
-test/test_main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_image_processing.dir/build.make CMakeFiles/test_image_processing.dir/test/test_main.cpp.o
-.PHONY : test/test_main.cpp.o
+src/interactive_app.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interactive_app.dir/build.make CMakeFiles/interactive_app.dir/src/interactive_app.cpp.o
+.PHONY : src/interactive_app.cpp.o
 
-test/test_main.i: test/test_main.cpp.i
-.PHONY : test/test_main.i
+src/interactive_app.i: src/interactive_app.cpp.i
+.PHONY : src/interactive_app.i
 
 # target to preprocess a source file
-test/test_main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_image_processing.dir/build.make CMakeFiles/test_image_processing.dir/test/test_main.cpp.i
-.PHONY : test/test_main.cpp.i
+src/interactive_app.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interactive_app.dir/build.make CMakeFiles/interactive_app.dir/src/interactive_app.cpp.i
+.PHONY : src/interactive_app.cpp.i
 
-test/test_main.s: test/test_main.cpp.s
-.PHONY : test/test_main.s
+src/interactive_app.s: src/interactive_app.cpp.s
+.PHONY : src/interactive_app.s
 
 # target to generate assembly for a file
-test/test_main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_image_processing.dir/build.make CMakeFiles/test_image_processing.dir/test/test_main.cpp.s
-.PHONY : test/test_main.cpp.s
+src/interactive_app.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interactive_app.dir/build.make CMakeFiles/interactive_app.dir/src/interactive_app.cpp.s
+.PHONY : src/interactive_app.cpp.s
+
+test/test.o: test/test.cpp.o
+.PHONY : test/test.o
+
+# target to build an object file
+test/test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_image_processing.dir/build.make CMakeFiles/test_image_processing.dir/test/test.cpp.o
+.PHONY : test/test.cpp.o
+
+test/test.i: test/test.cpp.i
+.PHONY : test/test.i
+
+# target to preprocess a source file
+test/test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_image_processing.dir/build.make CMakeFiles/test_image_processing.dir/test/test.cpp.i
+.PHONY : test/test.cpp.i
+
+test/test.s: test/test.cpp.s
+.PHONY : test/test.s
+
+# target to generate assembly for a file
+test/test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_image_processing.dir/build.make CMakeFiles/test_image_processing.dir/test/test.cpp.s
+.PHONY : test/test.cpp.s
 
 # Help Target
 help:
@@ -223,6 +260,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... image_processing"
+	@echo "... interactive_app"
 	@echo "... test_image_processing"
 	@echo "... src/Filters.o"
 	@echo "... src/Filters.i"
@@ -230,9 +268,12 @@ help:
 	@echo "... src/Image.o"
 	@echo "... src/Image.i"
 	@echo "... src/Image.s"
-	@echo "... test/test_main.o"
-	@echo "... test/test_main.i"
-	@echo "... test/test_main.s"
+	@echo "... src/interactive_app.o"
+	@echo "... src/interactive_app.i"
+	@echo "... src/interactive_app.s"
+	@echo "... test/test.o"
+	@echo "... test/test.i"
+	@echo "... test/test.s"
 .PHONY : help
 
 

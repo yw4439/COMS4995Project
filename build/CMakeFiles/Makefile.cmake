@@ -127,5 +127,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/image_processing.dir/DependInfo.cmake"
+  "CMakeFiles/interactive_app.dir/DependInfo.cmake"
   "CMakeFiles/test_image_processing.dir/DependInfo.cmake"
   )

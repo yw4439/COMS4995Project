@@ -1,4 +1,5 @@
 /home/yanming/COMS4995Project/build/CMakeFiles/image_processing.dir
+/home/yanming/COMS4995Project/build/CMakeFiles/interactive_app.dir
 /home/yanming/COMS4995Project/build/CMakeFiles/test_image_processing.dir
 /home/yanming/COMS4995Project/build/CMakeFiles/edit_cache.dir
 /home/yanming/COMS4995Project/build/CMakeFiles/rebuild_cache.dir
