@@ -1,0 +1,133 @@
+1. flip_horizontal(img: Image) -> None
+Flips an image horizontally by swapping pixels on the left and right sides of each row.
+
+Parameters
+img (Image):
+A reference to the Image object that represents the image to be flipped.
+
+Returns
+None
+
+2. flip_vertical(img: Image) -> None
+Flips an image vertically by swapping pixels on the top and bottom sides of each column.
+
+Parameters
+img (Image):
+A reference to the Image object that represents the image to be flipped.
+
+Returns
+None
+
+3. resize(img: Image, new_width: int, new_height: int) -> std::unique_ptr[Image]
+Resizes an image to a new width and height using a nearest-neighbor interpolation approach.
+
+Parameters
+img (Image):
+A constant reference to the original Image object to be resized.
+new_width (int):
+The desired width of the resized image. Must be greater than 0.
+new_height (int):
+The desired height of the resized image. Must be greater than 0.
+
+Returns
+std::unique_ptr[Image]:
+A pointer to a new Image object containing the resized image.
+
+4. invert_colors(img: Image) -> None
+Inverts the colors of an image by subtracting each pixel value from 255.
+
+Parameters
+img (Image):
+A reference to the Image object whose colors will be inverted.
+
+Returns
+None
+
+5. rotate(img: Image) -> std::unique_ptr[Image]
+Rotates an image 90 degrees clockwise. The output image will have its width and height swapped.
+
+Parameters
+img (Image):
+A constant reference to the original Image object to be rotated.
+
+Returns
+std::unique_ptr[Image]:
+A pointer to a new Image object containing the rotated image.
+
+6. rotate_image(img: Image, angle: float) -> None
+Rotates an image by a specified angle (in degrees). The new image dimensions will fully fit the rotated image.
+
+Parameters
+img (Image):
+A reference to the Image object to be rotated.
+angle (float):
+The rotation angle in degrees.
+
+Returns
+None
+
+7.adjust_brightness(img: Image, adjustment: int) -> None
+Adjusts the brightness of an image by adding a specified value to each pixel.
+
+Parameters
+img (Image):
+A reference to the Image object to be adjusted.
+adjustment (int):
+The amount to change brightness. Positive values increase brightness, negative values decrease it.
+
+Returns
+None
+
+8.adjust_contrast(img: Image, factor: float) -> None
+Adjusts the contrast of an image.
+
+Parameters
+img (Image):
+A reference to the Image object to be adjusted.
+factor (float):
+The contrast adjustment factor. Values greater than 1 increase contrast, while values between 0 and 1 decrease it.
+
+Returns
+None
+
+9. grayscale(img: Image, output: Image) -> None
+Converts an RGB image to grayscale. The output image will store the grayscale result.
+
+Parameters
+img (Image):
+A constant reference to the input RGB image.
+output (Image):
+A reference to an Image object where the grayscale result will be stored.
+
+Returns
+None
+
+10.sharpen(img: Image) -> None
+Applies a sharpening filter to an image to enhance its edges.
+
+Parameters
+img (Image):
+A reference to the Image object to be sharpened.
+
+Returns
+None
+
+11.edge_detection(img: Image) -> None
+Applies an edge-detection filter using the Laplacian kernel to highlight edges.
+
+Parameters
+img (Image):
+A reference to the Image object to process.
+
+Returns
+None
+
+12.gaussian_blur(img: Image) -> None
+Applies a Gaussian blur to smooth the image using a 3x3 Gaussian kernel.
+
+Parameters
+img (Image):
+A reference to the Image object to process.
+
+Returns
+None
